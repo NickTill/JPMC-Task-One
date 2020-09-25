@@ -1,0 +1,25 @@
+From c5f940a8a919c57507e34a8f351cb173996fa859 Mon Sep 17 00:00:00 2001
+From: Nick <ntillmann1439@>
+Date: Fri, 25 Sep 2020 07:31:09 -0400
+Subject: [PATCH] Create Patch File
+
+---
+ client.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/client.py b/client.py
+index 40badcd..8322132 100644
+--- a/client.py
++++ b/client.py
+@@ -35,7 +35,7 @@ def getDataPoint(quote):
+ 	stock = quote['stock']
+ 	bid_price = float(quote['top_bid']['price'])
+ 	ask_price = float(quote['top_ask']['price'])
+-	price = bid_price
++	price = (bid_price + ask_price)/2
+ 	return stock, bid_price, ask_price, price
+ 
+ def getRatio(price_a, price_b):
+-- 
+2.24.3 (Apple Git-128)
+
